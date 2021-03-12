@@ -2,7 +2,7 @@
 
 A test Kafka consumer that uses the `racecar` gem.
 
-I built it originally to go with my `[micronaut-kafka-test](https://github.com/jeantessier/micronaut-kafka-test)`
+I built it originally to go with my [`micronaut-kafka-test`](https://github.com/jeantessier/micronaut-kafka-test)
 app, but you can use it with any Kafka topic.
 
 ## To Run
