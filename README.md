@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A test Kafka consumer that uses the `racecar` gem.
 
-Things you may want to cover:
+I built it originally to go with my `[micronaut-kafka-test](https://github.com/jeantessier/micronaut-kafka-test)`
+app, but you can use it with any Kafka topic.
 
-* Ruby version
+## To Run
 
-* System dependencies
+To echo a specific topic:
 
-* Configuration
+    $ KAFKA_TOPIC=your-topic-name-goes-here bundle exec racecar EchoConsumer
 
-* Database creation
+To echo the default `some-topic` topic:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    $ bundle exec racecar EchoConsumer
