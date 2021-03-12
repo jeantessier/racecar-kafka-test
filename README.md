@@ -7,6 +7,10 @@ app, but you can use it with any Kafka topic.
 
 ## To Run
 
+> The very first time, or after a `git pull`, don't forget to do:
+> 
+>     $ bundle install
+
 To echo a specific topic:
 
     $ KAFKA_TOPIC=your-topic-name-goes-here bundle exec racecar EchoConsumer
