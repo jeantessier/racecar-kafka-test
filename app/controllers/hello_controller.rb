@@ -15,17 +15,22 @@ class HelloController < ApplicationController
       message: "Hello, #{name}!",
     }
 
-    config = { :"bootstrap.servers" => Racecar.config.brokers.first }
-    producer = Rdkafka::Config.new(config).producer
-
     puts "Producing #{message}"
-    producer.produce(
+    kafka_producer.produce(
       topic: kafka_topic,
       key: current_time_millis.to_s,
       payload: message.to_json
     ).wait
   ensure
-    producer.close
+    kafka_producer.close
+  end
+
+  def kafka_config
+    @kafka_config ||= { :"bootstrap.servers" => Racecar.config.brokers.first }
+  end
+
+  def kafka_producer
+    @kafka_producer ||= Rdkafka::Config.new(kafka_config).producer
   end
 
   def kafka_topic
