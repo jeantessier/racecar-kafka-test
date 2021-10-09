@@ -15,11 +15,11 @@ app, but you can use it with any Kafka topic.
 
 To echo a specific topic:
 
-    $ KAFKA_TOPIC=your-topic-name-goes-here bundle exec racecar EchoConsumer
+    $ KAFKA_TOPIC=your-topic-name-goes-here bin/racecar EchoConsumer
 
 To echo the default `some-topic` topic:
 
-    $ bundle exec racecar EchoConsumer
+    $ bin/racecar EchoConsumer
 
 ### Kafka Producer
 
