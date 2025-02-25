@@ -37,4 +37,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# These dependencies used to be included with ActiveSupport, but no longer.
+gem 'bigdecimal'
+gem 'mutex_m'
+
 gem 'racecar'
