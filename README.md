@@ -11,27 +11,33 @@ app, but you can use it with any Kafka topic.
 > 
 >     $ bundle install
 
+### Kafka
+
+To run Kafka in a Docker container:
+
+    docker compose up -d
+
 ### Racecar Consumer
 
 To echo a specific topic:
 
-    $ KAFKA_TOPIC=your-topic-name-goes-here bin/racecar EchoConsumer
+    KAFKA_TOPIC=your-topic-name-goes-here bin/racecar EchoConsumer
 
 To echo the default `some-topic` topic:
 
-    $ bin/racecar EchoConsumer
+    bin/racecar EchoConsumer
 
 ### Kafka Producer
 
 To write messages to a specific topic:
 
-    $ KAFKA_TOPIC=your-topic-name-goes-here bin/rails server
+    KAFKA_TOPIC=your-topic-name-goes-here bin/rails server
 
 To echo the default `some-topic` topic:
 
-    $ bin/rails server
+    bin/rails server
 
 Then, make a `POST` request to [/hello.index](http://localhost:3000/hello/index).
 
-    $ http POST :3000/hello/index
-    $ http POST :3000/hello/index name="Jean Tessier"
+    http POST :3000/hello/index
+    http :3000/hello/index name="Jean Tessier"
