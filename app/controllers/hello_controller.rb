@@ -1,8 +1,8 @@
 class HelloController < ApplicationController
   def index
-    @name = params[:name] || 'world'
+    name = params[:name] || 'world'
 
-    publish @name
+    publish name
 
     render plain: 'OK'
   end
